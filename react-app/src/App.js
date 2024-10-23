@@ -1,36 +1,26 @@
-import React, { Component, lazy, Suspense } from 'react';
-import 'bulma/css/bulma.css';
-import './styles.scss';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import { withRouter } from 'react-router';
-import { HeaderBar, NavBar, NotFound } from './components';
-import About from './About';
+import logo from './logo.svg';
+//import './App.css';
+import Index from './pages/Index';
+import Reserv from './pages/Reserv';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-const Products = withRouter(
-  lazy(() => import(/* webpackChunkName: "products" */ './products/Products'))
-);
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path='/' element = {<Index />} />
+          <Route path='/reserv' element = {<Reserv />} />
+          <Route path='/login' element = {<Login />} />
+          <Route path='/register' element = {<Register />} />
+        </Routes>
+      </Router>
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <HeaderBar />
-        <div className="section columns">
-          <NavBar />
-          <main className="column">
-            <Suspense fallback={<div>Loading...</div>}>
-              <Switch>
-                <Redirect from="/" exact to="/products" />
-                <Route path="/products" component={Products} />
-                <Route path="/about" component={About} />
-                <Route exact path="**" component={NotFound} />
-              </Switch>
-            </Suspense>
-          </main>
-        </div>
-      </div>
-    );
-  }
+      
+    </div>
+  );
 }
 
 export default App;

@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-      crossorigin="anonymous"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <title>Резервування аудиторій</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center
+      }
+      
+      .list {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .list li {
+        flex: 0 0 50%;
+        padding: 10px;
+        display: flex;
+        background-color: #c2bfbf; /* Додайте бажаний колір фону */
+              margin-bottom: 10px; /* Додайте бажаний відступ між елементами */
+          
+      }
+      
+      .list li img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      .list li .caption {
+        margin-left: 10px;
+        flex: 1;
+      }
+      
+      .list li h3,
+      .list li p {
+        margin: 0;
+      }
+    </style>
   </head>
-
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="modal"></div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
