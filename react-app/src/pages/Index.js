@@ -11,7 +11,7 @@ function Index() {
                 <div className="container">
                     <ul className="list">
                         <li>
-                            <img src="ASSETS/images/image1.jpg" width="300" height="200" />
+                            <img src="/assets/images/image1.jpg" width="300" height="200" />
                             <div className="caption">
                                 <h3>Аудитоторія 1</h3>
                                 <p>Велика аудиторія на 160 людей. У аудиторії наявний проектор розташований позаду слухачів. Також наявний стіл на сцені.</p>
